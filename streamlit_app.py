@@ -14,3 +14,14 @@ st.write('''Here the data seems like it is divided into 5 groups so our k will b
 
 k = 5
 
+cen = pd.DataFrame(df.drop(columns=["CustomerID"]).sample(random_state=42))
+
+for i in range(k-1):
+	dx = abs((cen.apply(lambda c: np.sqrt(((df.drop(columns=["CustomerID"])-c.to_numpy())**2).sum(axis-1)), axis=1))).T.min(axis=1)
+	p = dx/dx.sum()
+	cen.loc[i+1] = df.drop(columns=["CustomerID"]).iloc[np.argmax(p)]
+
+
+st.write('''## Initial centroid after K-means++''')
+st.scatter_chart(cen, x="Annula Income (k$)", y = "Spending score (1-100)")
+
