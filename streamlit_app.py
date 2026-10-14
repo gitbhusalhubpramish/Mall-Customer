@@ -31,3 +31,11 @@ for i in range(k-1):
 st.write('''## Initial centroid after K-means++''')
 st.scatter_chart(cen, x="Annual Income (k$)", y = "Spending Score (1-100)")
 
+def train():
+	global cen
+	dx = np.argmin(abs((ceb.apply(lambda c: np.sqrt(((df.drop(columns=["CustomerID"])-c.to_numpy())**2).sum(axis=1)), axis=1))).T, axis=1)
+	c = pd.Series(dx).groupby(dx).apply(lambda x:x.index.tolist())
+	csum = df.drop(columns=["CustomerID"]).groupby(dx).sum()
+	cen = csum.div(c.str.len(), axis=0)
+
+
