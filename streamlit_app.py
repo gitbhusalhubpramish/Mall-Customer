@@ -53,5 +53,5 @@ for i in range(10):
 	train()
 	losses.append(loss())
 
-cat().apply(lambda c: st.scatter_chart(c, x="Annual Income (k$)", x["Spending Score(1-100)"]))
+cat().apply(lambda c: st.scatter_chart(c, x="Annual Income (k$)", y="Spending Score(1-100)"))
 st.scater_chart(cen, x="Annual Income (k$)", y="Spending Score (1-100)")
