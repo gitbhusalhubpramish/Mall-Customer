@@ -29,5 +29,5 @@ for i in range(k-1):
 
 
 st.write('''## Initial centroid after K-means++''')
-st.scatter_chart(cen, x="Annula Income (k$)", y = "Spending score (1-100)")
+st.scatter_chart(cen, x="Annual Income (k$)", y = "Spending score (1-100)")
 
