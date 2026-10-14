@@ -44,7 +44,7 @@ def loss():
 	return np.sum(np.sum(np.sqrt((cen.iloc[0]-df.drop(columns=["CustomerID"]).iloc[c.iloc[0]])**2), axis=1))
 
 def cat():
-	dx = np.argmin(abs((cen.apply(lambda c:np.sqrt(((df.drop(colunms=["CustomerID"])-c.to_numpy())**2).sum(axis=1)), axis=1))).T, axis=1)
+	dx = np.argmin(abs((cen.apply(lambda c:np.sqrt(((df.drop(columns=["CustomerID"])-c.to_numpy())**2).sum(axis=1)), axis=1))).T, axis=1)
 	return pd.Series(dx).groupby(dx).apply(lambda x:x.index.tolist()).apply(lambda p: df.iloc[p])
 
 losses = [loss()]
