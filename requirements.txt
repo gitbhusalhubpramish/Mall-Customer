@@ -1,0 +1,6 @@
+kaglehub
+streamlit
+pandas
+numpy
+matplotlib
+
