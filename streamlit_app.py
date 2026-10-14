@@ -59,4 +59,4 @@ st.scatter_chart(cen, x="Annual Income (k$)", y="Spending Score (1-100)")
 st.write('''## Clusturing''')
 st.scatter_chart(pd.concat([v.assign(Cluster=str(k)) for k,v in cat().items()]), x="Annual Income (k$)", y="Spending Score (1-100)", color="Cluster")
 
-st.plot(losses)
+st.line_chart(losses)
