@@ -40,7 +40,7 @@ def train():
 
 def loss():
 	dx = np.argmin(abs((cen.apply(lambda c: np.sqrt(((df.drop(columns=["CustomerID"])-c.to_numpy())**2).sum(axis=1)), axis=1))).T,axis=1)
-	c = pd.series(dx).groupby(dx).apply(lambda x: x.index.tolist())
+	c = pd.Series(dx).groupby(dx).apply(lambda x: x.index.tolist())
 	return np.sum(np.sum(np.sqrt((cen.iloc[0]-df.drop(columns=["CustomerID"]).iloc[c.iloc[0]])**2), axis=1))
 
 def cat():
