@@ -1,4 +1,4 @@
-kaglehub
+kagglehub
 streamlit
 pandas
 numpy
