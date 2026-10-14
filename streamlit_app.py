@@ -8,7 +8,7 @@ path = kagglehub.dataset_download("shwetabh123/mall-customers", path="Mall_Custo
 df = pd.read_csv(path)
 
 st.write('''## Raw data''')
-st.scatter_chart(df["Annual Income (k$)"], df["Spending Score (1-100)"])
+st.scatter_chart(df, x="Annual Income (k$)", y = "Spending Score (1-100)")
 
 st.write('''Here the data seems like it is divided into 5 groups so our k will be 5. These kind of data are perfect for k-means''')
 
