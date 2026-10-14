@@ -23,7 +23,7 @@ st.write(cen.dtypes)
 st.write(df.dtypes)
 
 for i in range(k-1):
-	dx = abs((cen.apply(lambda c: np.sqrt(((df.drop(columns=["CustomerID"])-c.to_numpy())**2).sum(axis-1)), axis=1))).T.min(axis=1)
+	dx = abs((cen.apply(lambda c: np.sqrt(((df.drop(columns=["CustomerID"])-c.to_numpy())**2).sum(axis=1)), axis=1))).T.min(axis=1)
 	p = dx/dx.sum()
 	cen.loc[i+1] = df.drop(columns=["CustomerID"]).iloc[np.argmax(p)]
 
