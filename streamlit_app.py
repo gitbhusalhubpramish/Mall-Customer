@@ -53,7 +53,10 @@ for i in range(10):
 	train()
 	losses.append(loss())
 
-#cat().apply(lambda c: st.scatter_chart(c, x="Annual Income (k$)", y="Spending Score (1-100)"))
-#st.scatter_chart(cen, x="Annual Income (k$)", y="Spending Score (1-100)")
+st.write('''## Centroid after training''')
+st.scatter_chart(cen, x="Annual Income (k$)", y="Spending Score (1-100)")
 
+st.write('''## Clusturing''')
 st.scatter_chart(pd.concat([v.assign(Cluster=str(k)) for k,v in cat().items()]), x="Annual Income (k$)", y="Spending Score (1-100)", color="Cluster")
+
+st.plot(losses)
