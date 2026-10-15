@@ -8,4 +8,24 @@ This image is just the final result after the clustering the data. [Click here](
 
 ## Small intro to K-means
 
-K-means is a unsupervised clustring meachine learning algorithm. Means it doesn't have a label or doesn't have to predict the output rather clusterize the data, find patterns. We select some points called centroid and optmize them so all points are at minimum distance from it's centroid. 
+K-means is a unsupervised clustring meachine learning algorithm. Means it doesn't have a label or doesn't have to predict the output rather clusterize the data, find patterns. We select some points called centroid and optmize them so all points are at minimum distance from it's centroid.
+
+## Feature
+
+This project was made by me to understand K-means from scratch so it's main fearture is it has K-means applied from scratch but also:
+
+- K-means form scratch
+- K-means++ for centroid initlization
+- Numpy for math and matrix calculation
+- pandas for data manipulation
+- Data visulization
+- Clusters data 
+
+## Tech-Stack
+
+This project uses python liberies used for data science - visulization, caculation and data manipulation. I've used:
+
+- Numpy for math and matrix calculation.
+- matplotlib and streamlit for datavisulization
+- pandas for csv and data manipulation.
+
