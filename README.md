@@ -29,3 +29,24 @@ This project uses python liberies used for data science - visulization, caculati
 - matplotlib and streamlit for datavisulization
 - pandas for csv and data manipulation.
 
+## Work-flow
+
+The work flow of the project look like this:
+
+- **Fetch data:** Here it fetches the data from kaggle dataset.
+- **K-means++ for centroid initlization:** Here first centroid is initlized randomly. Then, K-means++ uses distance and probability to calculate next centroid - it chooses the furtherest point.
+- **Centroid centroization:** Here centorid is keept in the center of it's cluster.
+- **Clustring:** Here every datapoint is clusterized with the nearest centroid.
+- **Visulization:** Here we visulize the data after clustering in a scatter chart to conform whether it works well.
+
+## What did I learn?
+
+I had made this project to learn K-means form scratch. Ofcource I had learnt that. But others too like:
+
+- K-means
+- Clustring
+- Data visulization
+
+## Some extra info...
+
+I have been learning Meachine Learning so I make notes and make atleast one poject for each. I have writtern a jupiter notebook to plan and make this work then I make a python script file with the help of streamlit so that I can host and support Hackclub. Most of the progress is in my notebook. I made this to learn so it has very less AI implimented. I know how it works and why this works. A lot of time was spent in visulization and logic building which wasn't track by hackatime
